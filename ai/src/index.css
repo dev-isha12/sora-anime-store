@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0f1420;
+}
+
+button,
+textarea,
+input {
+  font: inherit;
+}
+
+.first {
+  background-color: #152034;
+  height: 100vh;
+  width: 360px;
+  flex: 0 0 360px;
+  overflow-y: auto;
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.img {
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.line,
+.li {
+  height: 1px;
+  background-color: azure;
+  opacity: 20%;
+}
+
+.li {
+  margin-top: 15px;
+}
+
+.open {
+  color: azure;
+  margin-left: 20px;
+  margin-top: 10px;
+  opacity: 50%;
+}
+
+.over {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 15px;
+  margin-left: 10px;
+  padding-right: 10px;
+}
+
+.show,
+.save,
+.one input,
+.generate button,
+.block-one {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.show,
+.save {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 14px;
+  font-size: 14px;
+}
+
+.show {
+  background-color: #1f2937;
+  color: #9ca3af;
+}
+
+.save,
+.generate button {
+  background-color: #7f45ff;
+  color: #f1f3f7;
+}
+
+.one input {
+  background-color: #1f2937;
+  color: #9ca3af;
+  padding: 8px 14px;
+  font-size: 14px;
+  max-width: 145px;
+}
+
+.ui textarea {
+  background-color: #1f2937;
+  color: #d1d5db;
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 14px;
+  height: 140px;
+  width: calc(100% - 40px);
+  max-width: 300px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  resize: vertical;
+  padding: 12px;
+  transition: all 0.2s ease;
+}
+
+.generate button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  margin-left: 20px;
+  padding: 10px 14px;
+  width: calc(100% - 40px);
+  max-width: 300px;
+  opacity: 80%;
+}
+
+.generate button:disabled {
+  cursor: not-allowed;
+  opacity: 45%;
+}
+
+.try {
+  margin-top: 15px;
+  margin-left: 20px;
+  opacity: 40%;
+  color: #f1f3f7;
+}
+
+.block-one {
+  background-color: #1f2937;
+  color: #9ca3af;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  width: calc(100% - 40px);
+  max-width: 300px;
+  margin-left: 20px;
+  margin-top: 10px;
+  padding: 10px 12px;
+  text-align: center;
+  opacity: 70%;
+}
+
+.block-one:hover,
+.show:hover,
+.save:hover,
+.generate button:not(:disabled):hover {
+  opacity: 100%;
+}
+
+@media (max-width: 900px) {
+  .first {
+    width: 300px;
+    flex-basis: 300px;
+  }
+
+  .over {
+    flex-wrap: wrap;
+  }
+}
